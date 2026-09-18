@@ -1,8 +1,8 @@
-%% Example CV - Fion Lei
-%% Comprehensive overview of all competencies, experience, and achievements.
-%% Use as a master reference when tailoring role-specific CVs.
+%% Example CV - [Your Name]
+%% Structural/formatting reference only - holds no real personal data, so it
+%% stays safe to commit and share. Real facts for tailoring a CV live in
+%% 01-candidate-profile.md and CLAUDE.md's Candidate Profile section.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -56,7 +56,7 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={Fion Lei - CV},
+    pdftitle={[Your Name] - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -71,14 +71,15 @@
 \usepackage{enumitem}
 \setlist{itemsep=0pt, topsep=2pt, parsep=0pt}
 
-% personal data
-\name{Fion}{Lei}
+% personal data - bracketed placeholders only; never fill this file in with
+% real contact details (see 01-candidate-profile.md / CLAUDE.md instead)
+\name{[YOUR}{NAME]}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{Calgary, Alberta, Canada}{}{}
-\phone[mobile]{(403)-875-3988}
-\email{fionslei@gmail.com}
-\extrainfo{\href{https://linkedin.com/in/fionlei/}{LinkedIn}, \href{https://github.com/fion-lei}{GitHub}, \href{https://fionlei.framer.website/}{Portfolio}}
+\address{[City, Province/State, Country]}{}{}
+\phone[mobile]{[+XX XXXXXXXXXX]}
+\email{your.email@example.com}
+\extrainfo{\href{https://linkedin.com/in/yourprofile}{LinkedIn}, \href{https://github.com/yourusername}{GitHub}, \href{https://yourportfolio.com}{Portfolio}}
 
 \begin{document}
 
@@ -120,29 +121,18 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{Jun 2026-Present}{Undergraduate Research Assistant}{University of Calgary, Interactions Lab}{Calgary, Canada}{}{\vspace{1pt}
+\item{\cventry{[Dates]}{[Job Title]}{[Company Name]}{[Location]}{}{\vspace{1pt}
 \begin{itemize}
-    \item {HCI research to improve accessibility and user experience through haptic feedback}
+    \item {[Responsibility or achievement, with a number where possible]}
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Previous Role ---
-\item{\cventry{May 2025-May 2026}{Data Developer Intern}{EVA by Turing Analytics (acquired by Novi Labs)}{Calgary, Canada}{}{\vspace{1pt}
+\item{\cventry{[Dates]}{[Job Title]}{[Company Name]}{[Location]}{}{\vspace{1pt}
 \begin{itemize}
-    \item {Engineered scalable batch data pipelines using Python, SQL, and NoSQL to automate ingestion and transformation of oil and gas datasets, reducing processing time by 50\%}
-    \item {Built 6+ full-scale ETLs and REST APIs to accelerate integration of new data sources}
-    \item {Increased data reliability by 90\% by implementing validation rules, error-handling logic, and quality-control checks across pipelines}
-    \item {Audited and enhanced 8+ code repositories and automated alerts to detect data quality issues and pipeline failures}
-\end{itemize}}}
-
-\vspace{3pt}
-
-% --- Earlier Role ---
-\item{\cventry{May 2024-Aug 2024}{Python Developer Intern}{Whitecap Resources Inc.}{Calgary, Canada}{}{\vspace{1pt}
-\begin{itemize}
-    \item {Independently built and delivered an end-to-end automated data pipeline with full technical documentation}
-    \item {Designed and managed relational databases using SQL and Oracle, improving data organization and retrieval by 70\%}
+    \item {[Responsibility or achievement, with a number where possible]}
+    \item {[Responsibility or achievement, with a number where possible]}
 \end{itemize}}}
 
 \end{itemize}
@@ -155,8 +145,8 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{2020-2026}{Bachelor of Science in Computer Science}{University of Calgary}{Calgary, Canada}{}{\vspace{1pt}
-In progress, expected Dec 2026. HCI Concentration, Minor in Psychology. Relevant courses: Databases Management Systems, Design and Analysis of Algorithms, Operating Systems, Data Structures and Algorithms, Human-Computer Interaction.
+\item{\cventry{[Dates]}{[Degree Name]}{[Institution Name]}{[Location]}{}{\vspace{1pt}
+[Concentration, minor, relevant coursework, GPA if strong, honors, etc.]
 }}
 
 \end{itemize}
@@ -168,13 +158,18 @@ In progress, expected Dec 2026. HCI Concentration, Minor in Psychology. Relevant
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item {English (native/fluent).}
+\item {[Language] ([Proficiency level, e.g. native/fluent]).}
 \end{itemize}
 
 % ============================================================
 %     PUBLICATIONS (optional - omit this section entirely when there are
+<<<<<<< Updated upstream
 %     none yet, as in the candidate profile; a placeholder like "[Author(s)]"
 %     would be a fabricated achievement on a CV meant to stay factual)
+=======
+%     none, since a placeholder like "[Author(s)]" would fabricate an
+%     achievement on a CV meant to stay factual)
+>>>>>>> Stashed changes
 % ============================================================
 
 % ============================================================
@@ -184,9 +179,14 @@ In progress, expected Dec 2026. HCI Concentration, Minor in Psychology. Relevant
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
+<<<<<<< Updated upstream
 \item{\textbf{Hack the Change} -- 2nd Place (2024).}
 \item{\textbf{Jason Lang Scholarship}}
 \item{\textbf{Alexander Rutherford Scholarship}}
+=======
+\item{\textbf{[Award or Honor Name]} -- [Brief description, if any] ([Year]).}
+\item{\textbf{[Award or Honor Name]}}
+>>>>>>> Stashed changes
 \end{itemize}
 
 \end{document}
