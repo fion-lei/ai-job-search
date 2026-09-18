@@ -22,6 +22,22 @@
 \colorlet{namecolor}{color1}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
+% Times New Roman, matching cover.cls's font in cover_letters/. moderncv's
+% "sans" classoption sets \familydefault to \sfdefault at \begin{document},
+% so overriding \setsansfont (not just \setmainfont) is what actually reaches
+% body text; \setmainfont is set too for any explicit \rmfamily use (e.g. the
+% class's bullet-symbol fallback). BoldFont points at the times-bold.ttf
+% companion so \bfseries/\textbf (name, section headings, skill/award labels)
+% render a true bold face instead of a synthesized/absent-shape substitution.
+\usepackage{fontspec}
+\setmainfont[Path = OpenFonts/fonts/times-new-roman/, BoldFont = times-bold]{times}
+\setsansfont[Path = OpenFonts/fonts/times-new-roman/, BoldFont = times-bold]{times}
+% \addressfont drives the phone/email/extrainfo header line (moderncvheadiii.sty
+% default: \normalsize\mdseries\upshape). Pinned to an explicit size, matching
+% \lettercontent's 11pt/13pt in cover.cls, so the CV and cover letter contact
+% lines render identically instead of both happening to use "normal size."
+\renewcommand*{\addressfont}{\fontsize{11pt}{13pt}\mdseries\upshape}
+
 \usepackage[utf8]{inputenc}
 % pdflatex fallback only (the documented engine is lualatex, which skips this
 % branch). Without T1 font encoding pdflatex builds accented letters with
@@ -48,6 +64,12 @@
 }}
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
+% Section bullets use plain itemize (not moderncv's own cvitem/cvlistitem),
+% which keeps LaTeX's default itemsep/topsep/parsep. Switching to Times New
+% Roman's slightly taller line spacing pushed the page from 1 to 2, so
+% tighten list spacing globally to keep the whole CV on one page.
+\usepackage{enumitem}
+\setlist{itemsep=0pt, topsep=2pt, parsep=0pt}
 
 % personal data
 \name{Fion}{Lei}
@@ -150,14 +172,10 @@ In progress, expected Dec 2026. HCI Concentration, Minor in Psychology. Relevant
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
+%     PUBLICATIONS (optional - omit this section entirely when there are
+%     none yet, as in the candidate profile; a placeholder like "[Author(s)]"
+%     would be a fabricated achievement on a CV meant to stay factual)
 % ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item {[Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}}
-\end{itemize}
 
 % ============================================================
 %     HONORS AND AWARDS (optional)
@@ -169,16 +187,6 @@ In progress, expected Dec 2026. HCI Concentration, Minor in Psychology. Relevant
 \item{\textbf{Hack the Change} -- 2nd Place (2024).}
 \item{\textbf{Jason Lang Scholarship}}
 \item{\textbf{Alexander Rutherford Scholarship}}
-\end{itemize}
-
-% ============================================================
-%     REFERENCES
-% ============================================================
-
-\section{References}
-\vspace{1pt}
-\begin{itemize}
-\item{Available upon request.}
 \end{itemize}
 
 \end{document}
