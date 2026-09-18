@@ -1,10 +1,10 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Fion Lei
 
 <!-- SETUP: This file is populated by running /setup -->
 <!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Fion Lei, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,76 +16,88 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Fion Lei
+- **Location:** Calgary, Alberta, Canada (open to Vancouver and remote-Canada roles; open to San Francisco, Seattle, and New York City roles but **not US-authorized** - would need employer sponsorship, e.g. TN/H-1B)
+- **Work authorization:** Canadian citizen/permanent resident - no US work authorization
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
+  | English | Native/Fluent |
   <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
   working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
   undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
   lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
   04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Final-year Computer Science student (BSc, expected Dec 2026), part-time Undergraduate Research Assistant at University of Calgary Interactions Lab, seeking new-grad Software/Data Developer and UX/UI Design roles
+- **LinkedIn headline:** "HCI Researcher & Final-Year CS Student @ University of Calgary"
 
 ### Education
 <!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Bachelor of Science in Computer Science** (2020-2026, in progress, expected Dec 2026) - University of Calgary
+  - HCI Concentration, Minor in Psychology
+  - Topics: Databases Management Systems, Design and Analysis of Algorithms, Operating Systems, Introduction to Computer Science/Software Engineering, Data Structures and Algorithms, Human-Computer Interaction
 
 ### Professional Experience
 <!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Undergraduate Research Assistant** (June 2026 - Present) - **University of Calgary, Interactions Lab** (Calgary, Alberta)
+  - HCI research to improve accessibility and user experience through haptic feedback
+- **Data Developer Intern** (May 2025 - May 2026) - **EVA by Turing Analytics (acquired by Novi Labs)** (Calgary, Alberta)
+  - Engineered scalable batch data pipelines (Python, SQL, NoSQL) for oil and gas datasets, reducing processing time by 50%
+  - Built 6+ full-scale ETLs and REST APIs; increased data reliability by 90% via validation and QA checks
+  - Audited and enhanced 8+ code repositories with automated data-quality/pipeline-failure alerts
+- **Python Developer Intern** (May 2024 - August 2024) - **Whitecap Resources Inc.** (Calgary, Alberta)
+  - Independently built and delivered an end-to-end automated drilling-data pipeline with full documentation
+  - Designed and managed relational databases (SQL, Oracle), improving retrieval by 70%
+  - Implemented 5+ error-handling mechanisms, improving pipeline reliability by 80%
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Python, SQL (PostgreSQL, Oracle, MySQL), JavaScript/TypeScript, React, Data Pipelines/ETL
+- **Secondary:** Java, Dart, React Native, Node.js, Flutter, Django/Django REST Framework, NoSQL (MongoDB)
+- **Domain:** Data engineering, Human-Computer Interaction (accessibility, haptics, UX/UI design), full-stack development
+- **Software:** Git/GitHub, Firebase, Azure, Figma, VS Code, PyCharm, IntelliJ, Android Studio, Claude Code, Jira
 
 ### Certifications
 <!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Databricks Fundamentals Accreditation**
+- **Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans (TCPS 2)** - completed 2022
 
 ### Publications
 <!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None yet.
 
 ### Awards
 <!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Hack the Change - 2nd Place (2024)
+- Jason Lang Scholarship
+- Alexander Rutherford Scholarship
+- Honour Roll
 
 ### Behavioral Profile
 <!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
+No formal assessment on file yet - see `.claude/skills/job-application-assistant/02-behavioral-profile.md` for inferred traits (labeled, pending your review) from LinkedIn/resume signal. Run `/setup --section behavioral` or answer a few behavioral questions directly to complete this.
+- **Strengths:** Cross-disciplinary (HCI + data engineering), high concurrent-leadership capacity across student organizations
 - **Growth areas:** [YOUR_GROWTH_AREAS]
 - **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
 
 ### What Excites You
 <!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- HCI and accessibility-focused work (haptic feedback, user-centered design)
+- Data engineering and pipeline-building at scale
+- Equally energized by both directions - open to roles blending or focusing on either
 
 ### Target Sectors
 <!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- **Big Tech (FAANG/MAANG):** Meta, Apple, Amazon, Netflix, Google, Microsoft
+- **AI/dev-tools & infrastructure startups (Redpoint Infrared 100-style list):** Anthropic, OpenAI, Databricks, Stripe, Vercel, Postman, Grafana Labs, ClickHouse, Cockroach Labs, Cursor, Replit, Supabase, Temporal, Tailscale, Docker, Redis, and the full target-company list in `.claude/skills/job-scraper/search-queries.md`
+- Preference for high-compensation roles relative to their location's cost of living
 
 ### Deal-breakers
 <!-- Hard constraints on job search. Language requirements are handled separately and
 automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- No defense companies / defense-sector contractors
+- Compensation should be high relative to the role's location (not just nominally high)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

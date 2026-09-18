@@ -59,7 +59,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Fion Lei - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -69,13 +69,13 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Fion}{Lei}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Calgary, Alberta, Canada}{}{}
+\phone[mobile]{(403)-875-3988}
+\email{fionslei@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/fionlei/}{LinkedIn}, \href{https://github.com/fion-lei}{GitHub}, \href{https://fionlei.framer.website/}{Portfolio}}
 
 \begin{document}
 \makecvtitle
@@ -137,11 +137,11 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Software/Data Developer roles:**
+> Final-year Computer Science student at the University of Calgary (HCI concentration) with hands-on experience building production data pipelines and full-stack applications. As a Data Developer Intern at EVA by Turing Analytics (acquired by Novi Labs), engineered batch ETL pipelines in Python and SQL that cut processing time by 50% and raised data reliability by 90% across oil and gas datasets. Combines strong backend/data engineering skills (Python, SQL, REST APIs) with full-stack delivery (React, Node.js, Django) from multiple shipped course and hackathon projects, using tools including Claude Code to accelerate development.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For UX/UI Design / HCI roles:**
+> Final-year Computer Science student at the University of Calgary specializing in Human-Computer Interaction, currently researching accessibility and haptic feedback as an Undergraduate Research Assistant. Led the design and build of multiple user-centered products - from a travel-planning app (Roamio) to a mental-health-focused hackathon game that placed 2nd at Hack the Change - grounding interface decisions in HCI research and iterative user feedback. Pairs design skills (Figma, prototyping, design systems) with the engineering ability to ship what is designed.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

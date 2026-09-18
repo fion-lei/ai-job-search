@@ -23,6 +23,8 @@ framework_version: 1.0.0
 - **[BEHAVIOR_1]:** [DESCRIPTION]
 - **[BEHAVIOR_2]:** [DESCRIPTION]
 - **[BEHAVIOR_3]:** [DESCRIPTION]
+- **Cross-disciplinary bridge-builder** *[Inferred from LinkedIn About - review before relying on this]*: describes their interest as "learning how humans and technology connect," and their experience spans data engineering, full-stack development, HCI research, and UX/UI design - suggests comfort operating across technical and human-centered domains rather than staying in one lane.
+- **High concurrent-leadership capacity** *[Inferred from LinkedIn/resume - review before relying on this]*: held leadership or coordination roles in 4 different student organizations concurrently with a full course load and internships (Women in Cybersecurity Club, DSML Club, Her Tech Connect, UXDC) - suggests strong multi-tasking, initiative, and follow-through.
 
 ## How You Work Best
 - [ENVIRONMENT_PREFERENCE_1]

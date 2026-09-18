@@ -39,6 +39,59 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
+## STAR Candidates (Complete Manually)
+<!-- Added by /setup Path A from CV/LinkedIn content. Fill in Situation/Task/Action/Result before using these in an interview. -->
+
+### Data pipeline reliability improvement (EVA by Turing Analytics / Novi Labs)
+**Source:** CV - Data Developer Intern, EVA by Turing Analytics (acquired by Novi Labs)
+**What happened:** Increased data reliability by 90% by implementing validation rules, error-handling logic, and quality-control checks across oil & gas data pipelines; also audited and enhanced 8+ repos with automated alerts for data quality issues.
+**Why it matters:** Good for questions about ownership, improving an existing system, attention to detail, or handling data quality at scale.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Drilling data automation (Whitecap Resources)
+**Source:** CV - Python Developer Intern, Whitecap Resources Inc.
+**What happened:** Independently built and delivered an end-to-end automated data pipeline (with full documentation) that eliminated manual drilling-data workflows and improved DB retrieval by 70%.
+**Why it matters:** Good for questions about independent ownership, working with minimal supervision, or a first professional project.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Leading CampuSync as team lead
+**Source:** CV - CampuSync, Team Lead (SENG 513 course project)
+**What happened:** Led a project team building a campus club/event platform; defined scope, assigned tasks by team members' strengths, made prioritization calls under tight timelines, and presented results to a non-engineering audience (instructor/TA).
+**Why it matters:** Good for questions about leadership, prioritization under deadline pressure, or communicating technical work to non-technical stakeholders.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### HCI-driven design leadership on Roamio
+**Source:** CV - Roamio (CPSC 481: Human-Computer Interaction I course project)
+**What happened:** Led a team of 5 designing and building a travel-planning mobile app, prioritizing a simple, intuitive UX grounded in HCI principles; gathered user feedback and iterated on the interface in response.
+**Why it matters:** Good for questions about user-centered design process, iterating from feedback, or leading a design-focused team.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### Hack the Change - 2nd place under time pressure
+**Source:** CV - Fleurish/PetPals, Hack the Change 2024 (Lead Front-end Developer & UX/UI Designer)
+**What happened:** Built a full-stack web app game promoting positive mental health, applying research-backed psychological strategies, in a hackathon timeframe, placing 2nd.
+**Why it matters:** Good for questions about working under time pressure, rapid prototyping, or applying research/theory to a practical build.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
 ## Common Tough Questions
 
 ### "Why did you leave [previous company]?"
