@@ -8,19 +8,21 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
-\moderncvcolor{blue}
+\moderncvcolor{black}
 
-% Force the name and section headings to render in moderncv blue (color1).
-% Default banking leaves them black: moderncvstylebanking.sty's \colorlet
-% copies (not aliases) the pre-scheme accent colour, so the name colours are
-% frozen before \moderncvcolor runs. Re-let them after. \namefont is the hook
-% every name-style macro routes through, so this also works on moderncv 2.3.1
+% Force the name and section headings to render in black (color1) - never
+% blue. moderncvstylebanking.sty's \colorlet copies (not aliases) the
+% pre-scheme accent colour, so the name colours are frozen before
+% \moderncvcolor runs; re-let them after. \namefont is the hook every
+% name-style macro routes through, so this also works on moderncv 2.3.1
 % (Debian/Ubuntu apt), which has no \firstnamestyle/\lastnamestyle at all.
 \renewcommand*{\namefont}{\fontsize{34}{36}\bfseries\upshape}
 \colorlet{firstnamecolor}{color1}
 \colorlet{lastnamecolor}{color1}
 \colorlet{namecolor}{color1}
-\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+% \MakeUppercase renders every \section{...} heading (Education, Work
+% Experience, etc.) in all caps automatically, without retyping each one.
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}\MakeUppercase{#1}}}
 
 % Times New Roman, matching cover.cls's font in cover_letters/. moderncv's
 % "sans" classoption sets \familydefault to \sfdefault at \begin{document},
@@ -32,7 +34,7 @@
 \usepackage{fontspec}
 \setmainfont[Path = OpenFonts/fonts/times-new-roman/, BoldFont = times-bold]{times}
 \setsansfont[Path = OpenFonts/fonts/times-new-roman/, BoldFont = times-bold]{times}
-% \addressfont drives the phone/email/extrainfo header line (moderncvheadiii.sty
+% \addressfont drives the contact line under the name (moderncvheadiii.sty
 % default: \normalsize\mdseries\upshape). Pinned to an explicit size, matching
 % \lettercontent's 11pt/13pt in cover.cls, so the CV and cover letter contact
 % lines render identically instead of both happening to use "normal size."
@@ -53,9 +55,9 @@
 % through \PassOptionsToPackage instead, which is what removes that clash.
 \AtEndPreamble{\hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=blue,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
     pdftitle={[Your Name] - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
@@ -72,14 +74,14 @@
 \setlist{itemsep=0pt, topsep=2pt, parsep=0pt}
 
 % personal data - bracketed placeholders only; never fill this file in with
-% real contact details (see 01-candidate-profile.md / CLAUDE.md instead)
+% real contact details (see 01-candidate-profile.md / CLAUDE.md instead).
 \name{[YOUR}{NAME]}
-% If you have no address to list, DELETE this whole line. \address{}{}{} fails
-% with "There's no line here to end" on every moderncv version.
-\address{[City, Province/State, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{your.email@example.com}
-\extrainfo{\href{https://linkedin.com/in/yourprofile}{LinkedIn}, \href{https://github.com/yourusername}{GitHub}, \href{https://yourportfolio.com}{Portfolio}}
+% No \address/\phone/\email calls: moderncv would print each on the same
+% "details" line as \extrainfo anyway (just with icons in front), but the
+% cover letter's header has no icons - so the whole contact line is built by
+% hand in \extrainfo below, in the exact order/format cover.cls's
+% \namesection uses, which is what keeps the two headers pixel-identical.
+\extrainfo{[+XX XXXXXXXXXX] | \href{mailto:your.email@example.com}{your.email@example.com} | \href{https://linkedin.com/in/yourprofile}{LinkedIn} | \href{https://yourportfolio.com}{Portfolio} | \href{https://github.com/yourusername}{GitHub}}
 
 \begin{document}
 
@@ -93,30 +95,24 @@
 \small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
 
 % ============================================================
-%     CORE COMPETENCIES
+%     EDUCATION
 % ============================================================
 
-\section{Core Competencies}
+\section{Education}
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
-
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
-
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
-
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
-
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item{\cventry{[Dates]}{[Degree Name]}{[Institution Name]}{[Location]}{}{\vspace{1pt}
+[Concentration, minor, relevant coursework, GPA if strong, honors, etc.]
+}}
 
 \end{itemize}
 
 % ============================================================
-%     PROFESSIONAL EXPERIENCE
+%     WORK EXPERIENCE
 % ============================================================
 
-\section{Professional Experience}
+\section{Work Experience}
 \vspace{3pt}
 \begin{itemize}
 
@@ -138,21 +134,45 @@
 \end{itemize}
 
 % ============================================================
-%     EDUCATION
+%     PROJECTS
 % ============================================================
 
-\section{Education}
-\vspace{1pt}
+\section{Projects}
+\vspace{3pt}
 \begin{itemize}
 
-\item{\cventry{[Dates]}{[Degree Name]}{[Institution Name]}{[Location]}{}{\vspace{1pt}
-[Concentration, minor, relevant coursework, GPA if strong, honors, etc.]
-}}
+% \cventry bolds its 3rd arg (organization slot), so Project Name goes there
+% and Tech Stack goes in the title slot - matching how Company Name (not Job
+% Title) renders bold in Work Experience above.
+\item{\cventry{[Dates]}{[Tech Stack]}{[Project Name]}{[Link, if any]}{}{\vspace{1pt}
+\begin{itemize}
+    \item {[What you built and the result/impact, with a number where possible]}
+\end{itemize}}}
 
 \end{itemize}
 
 % ============================================================
-%     LANGUAGES
+%     TOOLS & TECHNOLOGIES
+% ============================================================
+
+\section{Tools \& Technologies}
+\vspace{1pt}
+\begin{itemize}
+
+\item \textbf{[Languages]}: [Specific languages. Be concrete.]
+
+\item \textbf{[Frameworks \& Libraries]}: [Specific frameworks, libraries.]
+
+\item \textbf{[Databases]}: [Specific databases, data stores.]
+
+\item \textbf{[Cloud \& DevOps]}: [Platforms, CI/CD, infrastructure tools.]
+
+\item \textbf{[Developer Tools]}: [IDEs, version control, other tooling.]
+
+\end{itemize}
+
+% ============================================================
+%     LANGUAGES (optional)
 % ============================================================
 
 \section{Languages}
@@ -163,13 +183,8 @@
 
 % ============================================================
 %     PUBLICATIONS (optional - omit this section entirely when there are
-<<<<<<< Updated upstream
-%     none yet, as in the candidate profile; a placeholder like "[Author(s)]"
-%     would be a fabricated achievement on a CV meant to stay factual)
-=======
 %     none, since a placeholder like "[Author(s)]" would fabricate an
 %     achievement on a CV meant to stay factual)
->>>>>>> Stashed changes
 % ============================================================
 
 % ============================================================
@@ -179,14 +194,8 @@
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
-<<<<<<< Updated upstream
-\item{\textbf{Hack the Change} -- 2nd Place (2024).}
-\item{\textbf{Jason Lang Scholarship}}
-\item{\textbf{Alexander Rutherford Scholarship}}
-=======
 \item{\textbf{[Award or Honor Name]} -- [Brief description, if any] ([Year]).}
 \item{\textbf{[Award or Honor Name]}}
->>>>>>> Stashed changes
 \end{itemize}
 
 \end{document}

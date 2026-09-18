@@ -212,6 +212,7 @@ Wherever the CV names a verifiable artifact - a public project, a hackathon entr
 
 ### Honors and Awards
 - Keep format brief, one line each
+- Can be folded into the Education entry instead of kept as its own section, when the awards are academic (scholarships, dean's list, competition placements tied to the degree) and the posting's relevance bar favors a tighter one-page CV over a dedicated section. Keep it as a standalone section when the awards are professional/industry recognition, or when there isn't room inside the Education entry without crowding it.
 
 ### References
 - List 2-4 references with name, title, company, and contact

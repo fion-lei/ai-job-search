@@ -7,21 +7,12 @@
 % It demonstrates the correct itemize pattern: the list sits OUTSIDE
 % \lettercontent{} (whose trailing \\ errors on \end{itemize}) and is
 % wrapped in the matching font (Times New Roman) so the bullet font matches
-<<<<<<< Updated upstream
-% the body.
-%
-% Personal contact links are pulled from personal_links.tex rather than
-% typed here, so this example file stays free of hardcoded personal data
-% even though it renders the real links when compiled.
-=======
 % the body. Holds no real personal data - name, contact details, and links
 % are all bracketed placeholders - so it stays safe to commit and share.
->>>>>>> Stashed changes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[]{cover}
 \usepackage{fancyhdr}
-\input{personal_links.tex}
 
 % Override cover.cls's default Lato/Raleway fonts with Times New Roman for
 % this letter. cover.cls's commands (\namesection, \lettercontent, \closing,
@@ -36,9 +27,12 @@
 
 % Name/contact sizes (34pt/36pt name, 11pt/13pt contact line) match
 % cv/main_example.tex's \namefont and \addressfont exactly, so the CV and
-% cover letter headers render identically. The name text must NOT be wrapped
-% in \Huge (or any other size-changing command) at the call site below - that
-% would override the \fontsize{34pt}{36pt} set here.
+% cover letter headers render identically. Deliberately no \color{...} on
+% either line either - both stay plain black, matching the CV's
+% \moderncvcolor{black} (cover.cls's default gray "headings" color for the
+% contact line would otherwise mismatch the CV's black one). The name text
+% must NOT be wrapped in \Huge (or any other size-changing command) at the
+% call site below - that would override the \fontsize{34pt}{36pt} set here.
 \renewcommand{\namesection}[3]{
 \centering{
 \fontsize{34pt}{36pt}
@@ -46,46 +40,8 @@
 \coverletterfont\selectfont\bfseries #2
 } \\[5pt]
 \centering{
-\color{headings}
 \coverletterfont\fontsize{11pt}{13pt}\selectfont #3}
-\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.0pt}}
-\vspace{0pt}
-}
-
-\renewcommand{\currentdate}[1]{\raggedleft\coverletterfont\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
-
-\renewcommand{\lettercontent}[1]{\raggedright\coverletterfont\fontsize{11pt}{13pt}\selectfont {#1 \\}\mbox{}\\ \normalfont}
-
-\renewcommand{\closing}[1]{\raggedright\coverletterfont\fontsize{11pt}{13pt}\selectfont {#1 \\}\mbox{}\\\mbox{}\\ \normalfont}
-
-\renewcommand{\signature}[1]{\raggedright\coverletterfont\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
-
-% Override cover.cls's default Lato/Raleway fonts with Times New Roman for
-% this letter. cover.cls's commands (\namesection, \lettercontent, \closing,
-% \signature, \currentdate) each hardcode their own \fontspec call, so
-% \setmainfont/\setsansfont alone would not reach them - the commands are
-% redefined below to use \coverletterfont instead. BoldFont points at the
-% times-bold.ttf companion so \bfseries/\textbf (name, itemize labels) render
-% a true bold face instead of a synthesized/absent-shape substitution.
-\newcommand{\coverletterfont}{\fontspec[Path = OpenFonts/fonts/times-new-roman/, BoldFont = times-bold]{times}}
-\setmainfont[Path = OpenFonts/fonts/times-new-roman/, BoldFont = times-bold]{times}
-\setsansfont[Path = OpenFonts/fonts/times-new-roman/, BoldFont = times-bold]{times}
-
-% Name/contact sizes (34pt/36pt name, 11pt/13pt contact line) match
-% cv/main_example.tex's \namefont and \addressfont exactly, so the CV and
-% cover letter headers render identically. The name text must NOT be wrapped
-% in \Huge (or any other size-changing command) at the call site below - that
-% would override the \fontsize{34pt}{36pt} set here.
-\renewcommand{\namesection}[3]{
-\centering{
-\fontsize{34pt}{36pt}
-\coverletterfont\selectfont\bfseries #1
-\coverletterfont\selectfont\bfseries #2
-} \\[5pt]
-\centering{
-\color{headings}
-\coverletterfont\fontsize{11pt}{13pt}\selectfont #3}
-\noindent\makebox[\linewidth]{\color{headings}\rule{\paperwidth}{0.0pt}}
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.0pt}}
 \vspace{0pt}
 }
 
@@ -108,11 +64,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     TITLE NAME
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<<<<<<< Updated upstream
-\namesection{}{[YOUR NAME]}{  \href{mailto:your.email@example.com}{your.email@example.com} | [+XX XXXXXXXXXX] |  \urlstyle{same}\href{\candidateLinkedIn}{LinkedIn} | \href{\candidatePortfolio}{Portfolio} | \href{\candidateGitHub}{GitHub}
-=======
-\namesection{}{[YOUR NAME]}{  \href{mailto:your.email@example.com}{your.email@example.com} | [+XX XXXXXXXXXX] |  \urlstyle{same}\href{https://linkedin.com/in/yourprofile}{LinkedIn} | \href{https://yourportfolio.com}{Portfolio} | \href{https://github.com/yourusername}{GitHub}
->>>>>>> Stashed changes
+% Contact line order (phone | email | LinkedIn | Portfolio | GitHub) matches
+% cv/main_example.tex's \extrainfo exactly, so the two headers render
+% identically - only the underlying information differs.
+\namesection{}{[YOUR NAME]}{  [+XX XXXXXXXXXX] | \href{mailto:your.email@example.com}{your.email@example.com} |  \urlstyle{same}\href{https://linkedin.com/in/yourprofile}{LinkedIn} | \href{https://yourportfolio.com}{Portfolio} | \href{https://github.com/yourusername}{GitHub}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
